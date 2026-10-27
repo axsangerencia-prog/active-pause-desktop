@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descargar Programa de Pausas Activas MyS • Windows 10 & 11</title>
+  <meta name="description" content="Descarga oficial del Programa Nativo de Pausas Activas para Windows 10 y 11. Desarrollado por Mantenimiento y Supervisión S.A. para la prevención ergonómica y salud ocupacional.">
+  <meta name="theme-color" content="#090d16">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%233b82f6'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: rgba(18, 24, 38, 0.75);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --card-hover: rgba(255, 255, 255, 0.14);
+      --primary: #3b82f6;
+      --primary-hover: #2563eb;
+      --accent: #06b6d4;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --success: #10b981;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      min-height: 100vh;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(37, 99, 235, 0.18) 0%, transparent 45%),
+        radial-gradient(circle at 85% 25%, rgba(6, 182, 212, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 50% 85%, rgba(79, 70, 229, 0.12) 0%, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Header Nav */
+    header {
+      padding: 1.75rem 0;
+      border-bottom: 1px solid var(--card-border);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(9, 13, 22, 0.8);
+    }
+
+    .nav-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: white;
+    }
+
+    .logo-badge {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #1d4ed8, #0284c7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1.15rem;
+      letter-spacing: 0.05em;
+      box-shadow: 0 8px 16px -4px rgba(37, 99, 235, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .brand-text h1 {
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+
+    .brand-text span {
+      font-size: 0.72rem;
+      color: var(--accent);
+      font-weight: 600;
+      display: block;
+    }
+
+    .pwa-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.1rem;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 700;
+      transition: all 0.2s ease;
+    }
+
+    .pwa-link:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 4.5rem 0 3rem;
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      background: rgba(59, 130, 246, 0.12);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      color: #60a5fa;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .badge-pill .pulse-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #3b82f6;
+      box-shadow: 0 0 10px #3b82f6;
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-title .gradient-text {
+      background: linear-gradient(135deg, #ffffff 30%, #93c5fd 70%, #38bdf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(0.95rem, 2vw, 1.15rem);
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto 3rem;
+      font-weight: 400;
+    }
+
+    /* Cards Grid */
+    .downloads-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.75rem;
+      margin-bottom: 4.5rem;
+    }
+
+    .download-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 2.25rem;
+      backdrop-filter: blur(20px);
+      display: flex;
+      flex-col: column;
+      position: relative;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+    }
+
+    .download-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--card-hover);
+      box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.25);
+    }
+
+    .download-card.highlight {
+      border-color: rgba(59, 130, 246, 0.4);
+      background: linear-gradient(180deg, rgba(30, 58, 138, 0.35) 0%, rgba(18, 24, 38, 0.85) 100%);
+    }
+
+    .card-ribbon {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      font-size: 0.68rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.3rem 0.75rem;
+      border-radius: 8px;
+    }
+
+    .ribbon-recommended {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #34d399;
+    }
+
+    .ribbon-portable {
+      background: rgba(6, 182, 212, 0.15);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      color: #22d3ee;
+    }
+
+    .card-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: white;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      min-height: 2.6rem;
+    }
+
+    .card-specs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 1.75rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+    }
+
+    .spec-item {
+      padding: 0.35rem 0.65rem;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      color: #cbd5e1;
+    }
+
+    .download-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      width: 100%;
+      padding: 1rem 1.5rem;
+      border-radius: 16px;
+      font-weight: 800;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+      margin-top: auto;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: white;
+      box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.5);
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+      transform: scale(1.02);
+      box-shadow: 0 15px 30px -5px rgba(37, 99, 235, 0.7);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.07);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.3);
+      transform: scale(1.02);
+    }
+
+    /* Guide Section */
+    .guide-section {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 3rem 2.5rem;
+      backdrop-filter: blur(20px);
+      margin-bottom: 4.5rem;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .step-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 18px;
+      padding: 1.75rem;
+      position: relative;
+    }
+
+    .step-num {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: #1e3a8a;
+      border: 1px solid #3b82f6;
+      color: #93c5fd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 0.9rem;
+      margin-bottom: 1.25rem;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .step-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+
+    .step-text {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .alert-box {
+      margin-top: 2rem;
+      padding: 1.25rem 1.5rem;
+      border-radius: 16px;
+      background: rgba(59, 130, 246, 0.08);
+      border: 1px solid rgba(59, 130, 246, 0.25);
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .alert-box svg {
+      flex-shrink: 0;
+      color: #60a5fa;
+      margin-top: 0.2rem;
+    }
+
+    .alert-content h5 {
+      font-size: 0.85rem;
+      font-weight: 800;
+      margin-bottom: 0.25rem;
+      color: #93c5fd;
+    }
+
+    .alert-content p {
+      font-size: 0.78rem;
+      color: #cbd5e1;
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding: 3rem 0;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-links a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding: 3rem 0 2rem;
+      }
+      .download-card {
+        padding: 1.75rem;
+      }
+      .guide-section {
+        padding: 2rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="container nav-content">
+      <a href="#" class="brand">
+        <div class="logo-badge">MyS</div>
+        <div class="brand-text">
+          <h1>Mantenimiento y Supervisión S.A.</h1>
+          <span>Sistema Integrado de Gestión SST • 2026 Edition</span>
+        </div>
+      </a>
+      <a href="https://pausas.myssa.com.pe/" target="_blank" rel="noopener noreferrer" class="pwa-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+        <span>Abrir PWA Móvil</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="container">
+    <section class="hero">
+      <div class="badge-pill">
+        <span class="pulse-dot"></span>
+        <span>VERSIÓN OFICIAL 1.0.0 • COMPATIBLE CON WINDOWS 10 & 11</span>
+      </div>
+      <h2 class="hero-title">
+        Programa de <span class="gradient-text">Pausas Activas</span> para Computadoras
+      </h2>
+      <p class="hero-subtitle">
+        Software de escritorio con visión artificial por cámara (MediaPipe BlazePose), temporizadores inteligentes de fatiga, registro de ergonomía y sincronización segura en la nube.
+      </p>
+
+      <!-- Download Cards -->
+      <div class="downloads-grid">
+        <!-- Option 1: Setup NSIS -->
+        <div class="download-card highlight">
+          <div class="card-ribbon ribbon-recommended">Recomendado</div>
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/><line x1="12" y1="11" x2="12" y2="17"/><polyline points="9 14 12 17 15 14"/></svg>
+          </div>
+          <h3 class="card-title">Instalador Completo Oficial</h3>
+          <p class="card-desc">Instalador con asistente guiado NSIS. Agrega acceso directo en el escritorio, menú inicio e integración en segundo plano con Windows.</p>
+          <div class="card-specs">
+            <span class="spec-item">📁 Setup NSIS</span>
+            <span class="spec-item">⚖️ 106.5 MB</span>
+            <span class="spec-item">💻 Windows 64-bit</span>
+          </div>
+          <a href="https://github.com/axsangerencia-prog/active-pause-desktop/releases/download/v1.0.0/Programa.de.Pausas.Activas.de.MyS.Setup.1.0.0.exe" class="download-btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Descargar Instalador (.exe)</span>
+          </a>
+        </div>
+
+        <!-- Option 2: Portable Edition -->
+        <div class="download-card">
+          <div class="card-ribbon ribbon-portable">Sin Instalación</div>
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3 class="card-title">Versión Portable (.exe)</h3>
+          <p class="card-desc">No requiere instalación ni permisos de administrador. Ideal para ejecutar desde memorias USB o carpetas compartidas corporativas.</p>
+          <div class="card-specs">
+            <span class="spec-item">⚡ Ejecución Directa</span>
+            <span class="spec-item">⚖️ 103.2 MB</span>
+            <span class="spec-item">💻 Windows 64-bit</span>
+          </div>
+          <a href="https://github.com/axsangerencia-prog/active-pause-desktop/releases/download/v1.0.0/Programa.de.Pausas.Activas.de.MyS.1.0.0.exe" class="download-btn btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Descargar Portable (.exe)</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Installation Step-by-Step Guide -->
+    <section class="guide-section">
+      <div class="section-header">
+        <h3 class="section-title">Guía de Instalación Rápida</h3>
+        <p style="color: var(--text-muted); font-size: 0.85rem;">Siga estos sencillos pasos para iniciar sus pausas activas en su equipo:</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <h4 class="step-title">Descargar el Archivo</h4>
+          <p class="step-text">Haga clic en cualquiera de los botones de arriba según su preferencia (Instalador NSIS recomendado o Versión Portable).</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <h4 class="step-title">Ejecutar el Programa</h4>
+          <p class="step-text">Haga doble clic en el archivo descargado. Si Windows Defender SmartScreen muestra un aviso de prevención, haga clic en <strong>"Más información"</strong> y luego en <strong>"Ejecutar de todas formas"</strong>.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <h4 class="step-title">Iniciar Sesión y Empezar</h4>
+          <p class="step-text">Acceda con su cuenta de Google o correo corporativo. Su temporizador se activará automáticamente y registrará sus ejercicios ergonómicos.</p>
+        </div>
+      </div>
+
+      <!-- Smartscreen Notice -->
+      <div class="alert-box">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <div class="alert-content">
+          <h5>Aviso de Seguridad de Windows (SmartScreen)</h5>
+          <p>Al ser un software empresarial corporativo de desarrollo interno para Mantenimiento y Supervisión S.A., Windows puede mostrar una advertencia azul. El instalador está 100% verificado, libre de virus y optimizado para su bienestar ergonómico laboral.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="https://pausas.myssa.com.pe/" target="_blank">PWA Oficial MyS</a>
+        <span>•</span>
+        <a href="https://github.com/axsangerencia-prog/active-pause-desktop" target="_blank">Repositorio de Distribución</a>
+        <span>•</span>
+        <a href="https://github.com/axsangerencia-prog/active-pause-desktop/releases/tag/v1.0.0" target="_blank">Release v1.0.0</a>
+      </div>
+      <p>© 2026 Mantenimiento y Supervisión S.A. • Sistema Integrado de Gestión SST • Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
